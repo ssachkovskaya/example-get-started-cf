@@ -1,0 +1,5 @@
+mymodel:
+  labels:
+  - testing
+  path: s3://my-bucket/model.h5
+  type: model
