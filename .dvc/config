@@ -2,7 +2,19 @@
     remote = cloud
 ['remote "cache"']
     url = s3://dave-sandbox/example-get-started-cache
+['remote "cache-copy"']
+    url = s3://dave-sandbox/example-get-started-cache-copy
 ['remote "cloud"']
     url = s3://dave-sandbox-versioning/example-get-started-cloud-versioning
     version_aware = true
+    worktree = true
+['remote "cloud-copy"']
+    url = s3://dave-sandbox-versioning/example-get-started-cloud-versioning-copy
+    version_aware = true
+    worktree = true
+['remote "version-aware"']
+    url = s3://dave-sandbox-versioning/example-get-started-version-aware
+    version_aware = true
+['remote "worktree"']
+    url = s3://dave-sandbox-versioning/example-get-started-worktree
     worktree = true
