@@ -1,4 +1,8 @@
 [core]
-    remote = storage
-['remote "storage"']
-    url = https://remote.dvc.org/get-started
+    remote = cloud
+['remote "cache"']
+    url = s3://dave-sandbox/example-get-started-cache
+['remote "cloud"']
+    url = s3://dave-sandbox-versioning/example-get-started-cloud-versioning
+    version_aware = true
+    worktree = true
