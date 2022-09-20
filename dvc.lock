@@ -16,7 +16,7 @@ stages:
     outs:
     - path: data/prepared
       md5: f8934609be51496ee500f80eea539c6f.dir
-      size: 35339221
+      size: 0
       nfiles: 2
   featurize:
     cmd: python src/featurization.py data/prepared data/features
@@ -35,7 +35,7 @@ stages:
     outs:
     - path: data/features
       md5: cd13a19bfb4e1c433624cde372ca6c78.dir
-      size: 8844505
+      size: 0
       nfiles: 2
   train:
     cmd: python src/train.py data/features model.pkl
@@ -56,6 +56,8 @@ stages:
     - path: model.pkl
       md5: b3eccf84fb7284abd853e86602da339b
       size: 2523640
+      version_id: i0FNIrBmKgRYWidnaB4Tm52IdzdS5oSu
+      etag: b3eccf84fb7284abd853e86602da339b
   evaluate:
     cmd: python src/evaluate.py model.pkl data/features
     deps:
@@ -76,6 +78,8 @@ stages:
     - path: evaluation/importance.png
       md5: 1bbd07f3b1e3d86a69250b78b9000216
       size: 31247
+      version_id: R7aRSs_bNUQLnygOlC5Z.qTP8Jcr9X.d
+      etag: 1bbd07f3b1e3d86a69250b78b9000216
     - path: evaluation/plots/confusion_matrix.json
       md5: 79fc258fd394852a1e0642cefccf1f4c
       size: 487392
