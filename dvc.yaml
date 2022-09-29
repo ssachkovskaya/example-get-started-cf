@@ -48,3 +48,26 @@ stages:
         cache: false
     - evaluation/train.json:
         cache: false
+plots:
+  ROC:
+    x: fpr
+    y:
+      evaluation/train/plots/roc.json: tpr
+      evaluation/test/plots/roc.json: tpr
+  Precision-Recall:
+    x: recall
+    y:
+      evaluation/test/plots/precision_recall.json: precision
+  Confusion-Matrix:
+    template: confusion
+    x: actual
+    y:
+      evaluation/train/plots/confusion_matrix.json: predicted
+      evaluation/test/plots/confusion_matrix.json: predicted
+  evaluation/importance.csv:
+    title: Feature Importance
+    template: bar_horizontal_sorted
+    x: Mean decrease in impurity
+    y: Feature
+  evaluation/shap.png:
+    title: SHAP Feature Importance
