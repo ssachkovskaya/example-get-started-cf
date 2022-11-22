@@ -49,3 +49,21 @@ stages:
         cache: false
     - eval/live/train/metrics.json:
         cache: false
+plots:
+  - eval/importance.png
+  - Precision-Recall:
+      x: recall
+      y:
+        eval/prc/train/prc.json: precision
+        eval/prc/test/prc.json: precision
+  - ROC:
+      x: fpr
+      y:
+        eval/live/train/plots/sklearn/roc.json: tpr
+        eval/live/test/plots/sklearn/roc.json: tpr
+  - Confusion-Matrix:
+      template: confusion
+      x: actual
+      y:
+        eval/live/train/plots/sklearn/confusion_matrix.json: predicted
+        eval/live/test/plots/sklearn/confusion_matrix.json: predicted
