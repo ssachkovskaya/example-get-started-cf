@@ -54,3 +54,7 @@ stages:
         cache: false
         x: fpr
         y: tpr
+artifacts:
+  models:
+    path: models
+    type: model
