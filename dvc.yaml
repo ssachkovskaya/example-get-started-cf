@@ -58,3 +58,6 @@ artifacts:
   models:
     path: models
     type: model
+  dna:
+    path: models
+    type: model
